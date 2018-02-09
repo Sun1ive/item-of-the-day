@@ -1,15 +1,23 @@
 <template>
-  <main>
+  <main class="main">
     <section>
-      hello world
+      <Offer />
     </section>
   </main>
 </template>
 
 <script>
-export default {};
+import Offer from '../components/Offer.vue';
+
+export default {
+  components: {
+    Offer,
+  }
+};
 </script>
 
-<style scoped>
-
+<style scoped lang="stylus">
+// .main
+//   display flex
+//   flex-flow column wrap
 </style>

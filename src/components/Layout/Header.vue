@@ -28,6 +28,8 @@
   color #fefefe
   background-position center center !important
   background-size cover !important
+  z-index 2
+  position relative
 
 .header
   &__title

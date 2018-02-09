@@ -17,7 +17,7 @@ export default {
 </script>
 
 <style scoped lang="stylus">
-// .main
-//   display flex
-//   flex-flow column wrap
+.main
+  display flex
+  flex-flow column wrap
 </style>

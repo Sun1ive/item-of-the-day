@@ -3,6 +3,7 @@
     <AllProducts />
     <First />
     <Second />
+    <Discount />
     <Third />
     <Fourth />
     <Checkout />
@@ -14,6 +15,7 @@ import { Component, Vue } from 'vue-property-decorator';
 import AllProducts from '../Blocks/AllProducts.vue';
 import First from '../Blocks/First.vue';
 import Second from '../Blocks/Second.vue';
+import Discount from '../Blocks/Discount.vue';
 import Third from '../Blocks/Third.vue';
 import Fourth from '../Blocks/Fourth.vue';
 import Checkout from '../Blocks/Checkout.vue';
@@ -23,6 +25,7 @@ import Checkout from '../Blocks/Checkout.vue';
     AllProducts,
     First,
     Second,
+    Discount,
     Third,
     Fourth,
     Checkout,

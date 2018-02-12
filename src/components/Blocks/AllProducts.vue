@@ -1,24 +1,26 @@
 <template>
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-4">
-        <div class="offer">We offer</div>
+  <div class="allProducts">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-4">
+          <div class="offer">We offer</div>
+        </div>
       </div>
-    </div>
-    <div class="row justify-content-between">
-      <div 
-        class="col-5" 
-        v-for="item in products" 
-        :key="item.title"
-      >
-        <div class="text" v-html="item.title" />
-        <Box>
-          <img :src="item.src" :alt="item.title">
-        </Box>
-        <Btn 
-          :icon="item.icon"
-          class="my-btn"
-        >Look</Btn>
+      <div class="row justify-content-between">
+        <div 
+          class="col-5" 
+          v-for="item in products" 
+          :key="item.title"
+        >
+          <div class="text" v-html="item.title" />
+          <Box>
+            <img :src="item.src" :alt="item.title">
+          </Box>
+          <Btn 
+            :icon="item.icon"
+            class="my-btn"
+          >Look</Btn>
+        </div>
       </div>
     </div>
   </div>
@@ -41,6 +43,12 @@ export default class AllProducts extends Vue {
 
 
 <style scoped lang="stylus">
+.allProducts
+  background-image url('/products/gray.png')
+  margin-top -7rem
+  .container
+    padding-top 6rem
+
 .col-5
   text-align center
   margin 3rem 0
@@ -49,9 +57,6 @@ export default class AllProducts extends Vue {
     margin-bottom 1rem
   .my-btn
     margin-left auto
-
-
-
   
 .offer
   background-color #15101f
@@ -64,6 +69,6 @@ export default class AllProducts extends Vue {
   margin 5rem 0 2rem 0
 
 .justify-content-between
-  margin 2rem 0
+  padding 2rem 0
 
 </style>

@@ -17,22 +17,19 @@ import { Component, Vue } from 'vue-property-decorator';
 
 
 @Component
-export default class Cart extends Vue {
-
-}
+export default class Cart extends Vue {}
 </script>
 
 
 <style scoped lang="stylus">
-.cart-item {
+.cart-item
   display: flex;
-  align-items: center;
-}
+  align-items: center
 
-.cart-item {
+.cart-item 
   background-color: #fff;
   margin-top: 1rem;
-  justify-content: space-around;
-  padding: 1rem;
-}
+  justify-content: space-around
+  padding: 1rem
+
 </style>

@@ -27,6 +27,7 @@ export default class Third extends Vue {}
 
 <style scoped lang="stylus">
 .third
+  margin-top -7rem
   background-image url('/products/third.png')
   background-position center
   background-size cover

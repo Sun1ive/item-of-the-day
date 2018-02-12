@@ -34,4 +34,6 @@ export default class Second extends Vue {}
   display flex
   justify-content center
   align-items center
+  position relative
+  z-index 2
 </style>

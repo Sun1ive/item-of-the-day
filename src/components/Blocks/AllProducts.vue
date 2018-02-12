@@ -31,10 +31,10 @@ import { ProductTypes } from '@/Types/Types.ts';
 @Component
 export default class AllProducts extends Vue {
   private products: ProductTypes[] = [
-    { title: 'Сувенирные подушечки <br> с лавандой внутнри', src: 'All/3-layers.png', icon: '/svg/arrows.svg' },
-    { title: 'Наволочки с принтом <br> декоративные 40*40', src: 'All/2-layers.png', icon: '/svg/arrows.svg' },
-    { title: 'Вафельные кухонные <br> полотенца', src: 'All/1-layer.png', icon: '/svg/arrows.svg' },
-    { title: 'Микрофибра 30*30 <br> (Салфетка для пыли)', src: 'All/micro.png', icon: '/svg/arrows.svg' },
+    { title: 'Сувенирные подушечки <br> с лавандой внутнри', src: 'all/3-layers.png', icon: '/svg/arrows.svg' },
+    { title: 'Наволочки с принтом <br> декоративные 40*40', src: 'all/2-layers.png', icon: '/svg/arrows.svg' },
+    { title: 'Вафельные кухонные <br> полотенца', src: 'all/1-layer.png', icon: '/svg/arrows.svg' },
+    { title: 'Микрофибра 30*30 <br> (Салфетка для пыли)', src: 'all/micro.png', icon: '/svg/arrows.svg' },
   ];
 }
 </script>

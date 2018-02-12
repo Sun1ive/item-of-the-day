@@ -1,6 +1,7 @@
 import Vue from 'vue';
-import App from './App.vue';
 import 'bootstrap/dist/css/bootstrap-grid.min.css';
+
+import App from './App.vue';
 import './style/main.styl';
 import './registerServiceWorker';
 

@@ -5,7 +5,7 @@
         <div class="col">
           <ProductContainer>
             <h1 slot="item-head">Наволочки с принтом декоративные</h1>
-            <img slot="item-image" src="/All/1-layer.png" alt="one-pillow">
+            <img slot="item-image" src="/all/1-layer.png" alt="one-pillow">
             <div slot="item-size">50*40</div>
             <div slot="item-composition">sintepon</div>
             <div slot="item-price">$19</div>

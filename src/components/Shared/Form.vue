@@ -5,7 +5,6 @@
     <input required type="email" placeholder="Your email">
     <textarea required rows="5" placeholder="Address" />
     <textarea required rows="5" placeholder="Comment to the order" />
-    <input type="submit" value="hello">
     <button 
       @click.prevent="onCheckout" 
       class="buy-btn" 
@@ -26,22 +25,21 @@ export default class Form extends Vue {
 
 
 <style scoped lang="stylus">
-.form {
+.form
   display: flex;
   flex-flow: column wrap;
   padding: 2rem;
   background-color: #fff;
-
-  input, textarea {
+  input, textarea
     background-color: #ebe8f1;
     margin-bottom: 1rem;
     border: none;
     padding: 1rem;
     font-size: 1.5rem;
     width: 100%;
-  }
-
-  .buy-btn {
+    &::placeholder
+      color #cbc7d4 - 10%
+  .buy-btn
     text-transform: uppercase;
     color: #fff;
     background-color: #dfab1f;
@@ -52,10 +50,7 @@ export default class Form extends Vue {
     font-size: 3rem;
     cursor: pointer;
     transition: 0.4s ease;
+    &:hover
+      background-color: #dfab1f - 10%
 
-    &:hover {
-      background-color: #dfab1f - 10%;
-    }
-  }
-}
 </style>

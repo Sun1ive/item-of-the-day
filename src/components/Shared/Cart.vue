@@ -14,21 +14,31 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
+import { UserDataType } from '@/Types/Types.ts';
 
 @Component
-export default class Cart extends Vue {}
+export default class Cart extends Vue {
+  private user: UserDataType = {
+    name: '',
+    phone: null,
+    email: '',
+    address: '',
+    additional: '',
+  };
+}
 </script>
 
 
 <style scoped lang="stylus">
-.cart-item
-  display flex
-  align-items center
+.cart-item {
+  display: flex;
+  align-items: center;
+}
 
-.cart-item
-  background-color #fff
-  margin-top 1rem
-  justify-content space-around
-  padding 1rem
-
+.cart-item {
+  background-color: #fff;
+  margin-top: 1rem;
+  justify-content: space-around;
+  padding: 1rem;
+}
 </style>

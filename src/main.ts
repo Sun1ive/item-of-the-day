@@ -6,9 +6,11 @@ import './registerServiceWorker';
 
 import Button from '@/components/Shared/Button.vue';
 import ProductContainer from '@/components/Shared/ProductContainer.vue';
+import Box from '@/components/Shared/Box.vue';
 
 Vue.component('Btn', Button);
 Vue.component('ProductContainer', ProductContainer);
+Vue.component('Box', Box);
 
 Vue.config.productionTip = false;
 

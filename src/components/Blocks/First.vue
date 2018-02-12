@@ -2,7 +2,11 @@
   <div class="first">
     <div class="container">
       <div class="row">
-        <div class="col">hello world</div>
+        <div class="col">
+          <ProductContainer>
+            Hello world
+          </ProductContainer>
+        </div>
       </div>
     </div>
   </div>

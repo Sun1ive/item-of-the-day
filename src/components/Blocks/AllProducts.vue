@@ -12,9 +12,9 @@
         :key="item.title"
       >
         <div class="text" v-html="item.title" />
-        <div class="box">
+        <Box>
           <img :src="item.src" :alt="item.title">
-        </div>
+        </Box>
         <Btn 
           :icon="item.icon"
           class="my-btn"
@@ -50,15 +50,7 @@ export default class AllProducts extends Vue {
   .my-btn
     margin-left auto
 
-.box
-  width 225px
-  height 225px
-  background-color #312648
-  border-radius 50%
-  display flex
-  justify-content center
-  align-items center
-  margin 0 auto
+
 
   
 .offer

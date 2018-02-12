@@ -5,16 +5,20 @@
         <div class="offer">We offer</div>
       </div>
     </div>
-    <div class="row">
+    <div class="row justify-content-between">
       <div 
-        class="col-6" 
+        class="col-5" 
         v-for="item in products" 
         :key="item.title"
       >
-        <div class="text" v-html="item.title"></div>
+        <div class="text" v-html="item.title" />
         <div class="box">
-          <img :src="src" :alt="item.title">
+          <img :src="item.src" :alt="item.title">
         </div>
+        <btn class="my-btn">
+          <template slot="text">Look</template>
+          <div class="icon arrow"  slot="icon" />
+        </btn>
       </div>
     </div>
   </div>
@@ -27,19 +31,24 @@ import { ProductTypes } from '@/Types/Types.ts';
 @Component
 export default class AllProducts extends Vue {
   private products: ProductTypes[] = [
-    { title: 'Сувенирные подушечки <br> с лавандой внутнри', src: '/All/3-layers.png' },
+    { title: 'Сувенирные подушечки <br> с лавандой внутнри', src: 'All/3-layers.png' },
+    { title: 'Наволочки с принтом <br> декоративные 40*40', src: 'All/2-layers.png' },
+    { title: 'Вафельные кухонные <br> полотенца', src: 'All/1-layer.png' },
+    { title: 'Микрофибра 30*30 <br> (Салфетка для пыли)', src: 'All/micro.png' },
   ];
 }
 </script>
 
 
 <style scoped lang="stylus">
-.col-6
+.col-5
   text-align center
-  margin 1rem 0
+  margin 3rem 0
   .text
-    font-size 3rem
+    font-size 2rem
     margin-bottom 1rem
+  .my-btn
+    margin-left auto
 
 .box
   width 225px
@@ -50,6 +59,7 @@ export default class AllProducts extends Vue {
   justify-content center
   align-items center
   margin 0 auto
+
   
 .offer
   background-color #15101f
@@ -59,14 +69,7 @@ export default class AllProducts extends Vue {
   text-align center
 
 .col-4
-  margin-top 5rem
+  margin 5rem 0
 
-.icon
-  margin-left 1rem
-  font-size .9rem
-  background-image url('/svg/arrows.svg')
-  width 20px
-  height 20px
-  background-repeat no-repeat
-  background-position center
+
 </style>

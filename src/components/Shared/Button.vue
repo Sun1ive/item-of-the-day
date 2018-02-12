@@ -16,7 +16,7 @@ export default class Button extends Vue {
   @Prop({ default: 200 })
   public width!: number;
 
-  @Prop({ default: 45 })
+  @Prop({ default: 40 })
   public height!: number;
 }
 </script>
@@ -31,4 +31,5 @@ export default class Button extends Vue {
   align-items center
   transition .4s linear
   cursor pointer
+  text-transform uppercase
 </style>

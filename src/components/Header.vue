@@ -1,16 +1,14 @@
 <template>
   <header class="header">
-    <div class="container-fluid">
-      <div class="wrapper">
-        <div class="row">
-          <div class="col">
-            <h1 class="header__title">Home products</h1>
-          </div>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <h1 class="header__title"><span class="yellow">H</span>ome products</h1>
         </div>
-        <div class="row">
-          <div class="col">
-            <p class="header__text">The best offer for you and for your home space</p>
-          </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg">
+          <p class="header__text">The best offer for you and for your home space</p>
         </div>
       </div>
     </div>
@@ -28,6 +26,8 @@ export default class Header extends Vue {}
 <style scoped lang="stylus">
 .header
   background-image url('/header.png')
+  background-position center center
+  background-size cover
   min-height 700px
   display flex
   justify-content center
@@ -35,7 +35,15 @@ export default class Header extends Vue {}
   &__title
   &__text
     color #fff
-    font-weight bold
     text-align center
     background-color rgba(#25213b, 0.8)
+    margin .5rem 0
+    padding .5rem 0
+    letter-spacing 4px
+  
+  &__text
+    font-size 2.1rem
+  &__title
+    font-size 6rem
+
 </style>

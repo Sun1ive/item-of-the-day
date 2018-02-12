@@ -6,28 +6,14 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-6">
-        <div class="text">Сувенирные подушечки <br> с лавандой внутнри</div>
+      <div 
+        class="col-6" 
+        v-for="item in products" 
+        :key="item.title"
+      >
+        <div class="text" v-html="item.title"></div>
         <div class="box">
-          <img src="/All/3-layers.png" alt="">
-        </div>
-      </div>
-      <div class="col-6">
-        <div class="text">Сувенирные подушечки <br> с лавандой внутнри</div>
-        <div class="box">
-          <img src="/All/2-layers.png" alt="">
-        </div>
-      </div>
-      <div class="col-6">
-        <div class="text">Сувенирные подушечки <br> с лавандой внутнри</div>
-        <div class="box">
-          <img src="/All/1-layer.png" alt="">
-        </div>
-      </div>
-      <div class="col-6">
-        <div class="text">Сувенирные подушечки <br> с лавандой внутнри</div>
-        <div class="box">
-          <img src="/All/micro.png" alt="">
+          <img :src="src" :alt="item.title">
         </div>
       </div>
     </div>
@@ -36,9 +22,14 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
+import { ProductTypes } from '@/Types/Types.ts';
 
 @Component
-export default class AllProducts extends Vue {}
+export default class AllProducts extends Vue {
+  private products: ProductTypes[] = [
+    { title: 'Сувенирные подушечки <br> с лавандой внутнри', src: '/All/3-layers.png' },
+  ];
+}
 </script>
 
 
@@ -69,4 +60,13 @@ export default class AllProducts extends Vue {}
 
 .col-4
   margin-top 5rem
+
+.icon
+  margin-left 1rem
+  font-size .9rem
+  background-image url('/svg/arrows.svg')
+  width 20px
+  height 20px
+  background-repeat no-repeat
+  background-position center
 </style>

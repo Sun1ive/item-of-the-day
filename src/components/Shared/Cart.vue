@@ -14,17 +14,11 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import { UserDataType } from '@/Types/Types.ts';
+
 
 @Component
 export default class Cart extends Vue {
-  private user: UserDataType = {
-    name: '',
-    phone: null,
-    email: '',
-    address: '',
-    additional: '',
-  };
+ 
 }
 </script>
 

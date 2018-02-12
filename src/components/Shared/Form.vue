@@ -1,10 +1,33 @@
 <template>
   <form class="form">
-    <input required type="text" placeholder="Your name">
-    <input required type="number" placeholder="Your phone">
-    <input required type="email" placeholder="Your email">
-    <textarea required rows="5" placeholder="Address" />
-    <textarea required rows="5" placeholder="Comment to the order" />
+    <input 
+      v-model.lazy.trim="user.name"
+      required
+      type="text"
+      placeholder="Your name"
+    >
+    <input 
+      v-model.lazy.number="user.phone"
+      required
+      type="number"
+      placeholder="Your phone"
+    >
+    <input 
+      v-model.lazy.trim="user.email"
+      required
+      type="email"
+      placeholder="Your email"
+    >
+    <textarea 
+      v-model.lazy.trim="user.address" 
+      required rows="5" 
+      placeholder="Address"
+    />
+    <textarea 
+      v-model.lazy.trim="user.additional" 
+      required rows="5" 
+      placeholder="Comment to the order"
+    />
     <button 
       @click.prevent="onCheckout" 
       class="buy-btn" 
@@ -15,9 +38,18 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
+import { UserDataType } from '@/Types/Types.ts';
 
 @Component
 export default class Form extends Vue {
+   private user: UserDataType = {
+    name: '',
+    phone: null,
+    email: '',
+    address: '',
+    additional: '',
+  };
+
   private onCheckout(): void {}
   // axios request ..
 }

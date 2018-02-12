@@ -5,6 +5,7 @@
     <Second />
     <Third />
     <Fourth />
+    <Checkout />
   </main>
 </template>
 
@@ -15,6 +16,7 @@ import First from '../Blocks/First.vue';
 import Second from '../Blocks/Second.vue';
 import Third from '../Blocks/Third.vue';
 import Fourth from '../Blocks/Fourth.vue';
+import Checkout from '../Blocks/Checkout.vue';
 
 @Component({
   components: {
@@ -23,6 +25,7 @@ import Fourth from '../Blocks/Fourth.vue';
     Second,
     Third,
     Fourth,
+    Checkout,
   },
 })
 export default class Main extends Vue {}

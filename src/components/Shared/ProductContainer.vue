@@ -2,14 +2,38 @@
   <div class="product">
     <div class="container">
       <div class="row justify-content-center">
-        <h1>hello world</h1>
+        <slot name="item-head"></slot>
       </div>
-      <div class="row">
+      <div class="row align-items-center">
         <div class="col-4">
-          <img src="/All/1-layer.png" alt="">
+          <Box>
+            <slot name="item-image" />
+          </Box>
         </div>
-        <div class="col-8 flex"></div>
+        <div class="col-8">
+          <div class="flex">
+            <img src="/icons/line.png" alt="size">
+            <slot name="item-size" />
+          </div>
+          <div class="flex">
+            <img src="/icons/spin.png" alt="composition">
+            <slot name="item-composition" />
+          </div>
+          <div class="flex">
+            <img src="/icons/label.png" alt="price">
+            <slot name="item-price" />
+          </div>
+          <div class="flex">
+            <slot name="item-text" />
+          </div>
+        </div>
       </div>
+      <Btn 
+        class="btn" 
+        :icon="'/icons/cart.png'"
+        :height="50"
+        :width="220"
+      >Add to</Btn>
     </div>
   </div>
 </template>
@@ -26,4 +50,16 @@ export default class ProductContainer extends Vue {}
 .product
   background-color rgba(#312648, .7)
   color #fff
+  .container
+    padding 2rem 1rem
+  .flex
+    display flex
+    align-items center
+    font-size 2rem
+    margin-top 1rem
+    img
+      margin-right 1rem
+  .btn
+    color #333
+    margin-left auto
 </style>

@@ -14,12 +14,15 @@ export default class Box extends Vue {}
 
 <style scoped lang="stylus">
 .box
-  width 225px
-  height 225px
+  width 220px
+  height 220px
   background-color #312648
   border-radius 50%
   display flex
   justify-content center
   align-items center
   margin 0 auto
+  img
+    width 85%
+    height 85%
 </style>

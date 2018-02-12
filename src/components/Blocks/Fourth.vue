@@ -5,7 +5,7 @@
         <div class="col">
           <ProductContainer>
             <h1 slot="item-head">Микрофибра (Салфетка для пыли)</h1>
-            <img slot="item-image" src="/All/micro.png" alt="one-pillow">
+            <img slot="item-image" src="/all/micro.png" alt="one-pillow">
             <div slot="item-size">30*30</div>
             <div slot="item-composition">polyester, polyamide</div>
             <div slot="item-price">$19</div>

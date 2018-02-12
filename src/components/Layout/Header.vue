@@ -2,12 +2,12 @@
   <header class="header">
     <div class="container">
       <div class="row justify-content-center">
-        <div class="col-lg-10">
+        <div class="col-lg-9">
           <h1 class="header__title"><span class="yellow">H</span>ome products</h1>
         </div>
       </div>
       <div class="row justify-content-center">
-        <div class="col-lg">
+        <div class="col-lg-10">
           <p class="header__text">The best offer for you and for your home space</p>
         </div>
       </div>
@@ -32,6 +32,7 @@ export default class Header extends Vue {}
   display flex
   justify-content center
   align-items center
+  position relative
   &__title
   &__text
     color #fff

@@ -15,10 +15,10 @@
         <div class="box">
           <img :src="item.src" :alt="item.title">
         </div>
-        <btn class="my-btn">
-          <template slot="text">Look</template>
-          <div class="icon arrow"  slot="icon" />
-        </btn>
+        <Btn 
+          :icon="item.icon"
+          class="my-btn"
+        >Look</Btn>
       </div>
     </div>
   </div>
@@ -31,10 +31,10 @@ import { ProductTypes } from '@/Types/Types.ts';
 @Component
 export default class AllProducts extends Vue {
   private products: ProductTypes[] = [
-    { title: 'Сувенирные подушечки <br> с лавандой внутнри', src: 'All/3-layers.png' },
-    { title: 'Наволочки с принтом <br> декоративные 40*40', src: 'All/2-layers.png' },
-    { title: 'Вафельные кухонные <br> полотенца', src: 'All/1-layer.png' },
-    { title: 'Микрофибра 30*30 <br> (Салфетка для пыли)', src: 'All/micro.png' },
+    { title: 'Сувенирные подушечки <br> с лавандой внутнри', src: 'All/3-layers.png', icon: '/svg/arrows.svg' },
+    { title: 'Наволочки с принтом <br> декоративные 40*40', src: 'All/2-layers.png', icon: '/svg/arrows.svg' },
+    { title: 'Вафельные кухонные <br> полотенца', src: 'All/1-layer.png', icon: '/svg/arrows.svg' },
+    { title: 'Микрофибра 30*30 <br> (Салфетка для пыли)', src: 'All/micro.png', icon: '/svg/arrows.svg' },
   ];
 }
 </script>
@@ -69,7 +69,9 @@ export default class AllProducts extends Vue {
   text-align center
 
 .col-4
-  margin 5rem 0
+  margin 5rem 0 2rem 0
 
+.justify-content-between
+  margin 2rem 0
 
 </style>

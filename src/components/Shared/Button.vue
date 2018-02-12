@@ -3,8 +3,12 @@
     class="button"
     :style="{ width: width + 'px', height: height + 'px' }"
   >
-    <slot name="text" />
-    <slot name="icon" />
+    <slot/>
+    <div 
+      v-if="icon"
+      class="icon" 
+      :style="{ backgroundImage: 'url(' + icon + ')' }" 
+    />
   </div>
 </template>
 
@@ -14,10 +18,13 @@ import { Component, Vue, Prop } from 'vue-property-decorator';
 @Component
 export default class Button extends Vue {
   @Prop({ default: 200 })
-  public width!: number;
+  public width: number;
 
   @Prop({ default: 40 })
-  public height!: number;
+  public height: number;
+
+  @Prop()
+  public icon: string;
 }
 </script>
 

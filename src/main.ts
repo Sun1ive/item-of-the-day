@@ -5,8 +5,10 @@ import './style/main.styl';
 import './registerServiceWorker';
 
 import Button from '@/components/Shared/Button.vue';
+import ProductContainer from '@/components/Shared/ProductContainer.vue';
 
-Vue.component('btn', Button);
+Vue.component('Btn', Button);
+Vue.component('ProductContainer', ProductContainer);
 
 Vue.config.productionTip = false;
 

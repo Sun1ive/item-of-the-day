@@ -30,9 +30,11 @@
       </div>
       <Btn 
         class="btn" 
-        :icon="'/icons/cart.png'"
+        :cart="true"
         :height="50"
         :width="220"
+        :iconWidth="30"
+        :iconHeight="30"
       >Add to</Btn>
     </div>
   </div>

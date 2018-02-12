@@ -1,8 +1,8 @@
 <template>
   <div class="product">
     <div class="container">
-      <div class="row justify-content-center">
-        <slot name="item-head"></slot>
+      <div class="head row justify-content-center">
+        <slot name="item-head" />
       </div>
       <div class="row align-items-center">
         <div class="col-4">
@@ -21,7 +21,9 @@
           </div>
           <div class="flex">
             <img src="/icons/label.png" alt="price">
-            <slot name="item-price" />
+            <span class="yellow">
+              <slot name="item-price" />
+            </span>
           </div>
           <div class="flex">
             <slot name="item-text" />
@@ -54,6 +56,8 @@ export default class ProductContainer extends Vue {}
   color #fff
   .container
     padding 2rem 1rem
+    .head
+      margin-bottom 1rem
   .flex
     display flex
     align-items center

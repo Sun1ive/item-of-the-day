@@ -2,12 +2,12 @@
   <header class="header">
     <div class="container">
       <div class="row justify-content-center">
-        <div class="col-lg-9">
+        <div class="col-lg-7">
           <h1 class="header__title"><span class="yellow">H</span>ome products</h1>
         </div>
       </div>
       <div class="row justify-content-center">
-        <div class="col-lg-10">
+        <div class="col-lg-8">
           <p class="header__text">The best offer for you and for your home space</p>
         </div>
       </div>
@@ -41,7 +41,6 @@ export default class Header extends Vue {}
     margin .5rem 0
     padding .5rem 0
     letter-spacing 4px
-  
   &__text
     font-size 2.1rem
   &__title

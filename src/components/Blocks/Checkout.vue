@@ -53,14 +53,14 @@ export default class Checkout extends Vue {}
 
 <style scoped lang="stylus">
 .checkout
-  margin-top: 6rem;
-  background-image: url('/checkout.jpg');
-  background-position: center;
-  background-size: cover;
-  height: 1020px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin-top: 6rem
+  background-image: url('/checkout.jpg')
+  background-position: center
+  background-size: cover
+  height: 1020px
+  display: flex
+  justify-content: center
+  align-items: center
   .head
     font-size: 3rem
 

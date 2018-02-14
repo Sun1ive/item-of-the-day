@@ -17,8 +17,9 @@
             <img :src="item.src" :alt="item.title">
           </Box>
           <Btn 
-            :icon="item.icon"
+            :arrow="true"
             class="my-btn"
+            :width="150"
           >Look</Btn>
         </div>
       </div>
@@ -33,10 +34,10 @@ import { ProductTypes } from '@/Types/Types.ts';
 @Component
 export default class AllProducts extends Vue {
   private products: ProductTypes[] = [
-    { title: 'Сувенирные подушечки <br> с лавандой внутнри', src: 'all/3-layers.png', icon: '/svg/arrows.svg' },
-    { title: 'Наволочки с принтом <br> декоративные 40*40', src: 'all/2-layers.png', icon: '/svg/arrows.svg' },
-    { title: 'Вафельные кухонные <br> полотенца', src: 'all/1-layer.png', icon: '/svg/arrows.svg' },
-    { title: 'Микрофибра 30*30 <br> (Салфетка для пыли)', src: 'all/micro.png', icon: '/svg/arrows.svg' },
+    { title: 'Сувенирные подушечки <br> с лавандой внутнри', src: 'all/3-layers.png' },
+    { title: 'Наволочки с принтом <br> декоративные 40*40', src: 'all/2-layers.png' },
+    { title: 'Вафельные кухонные <br> полотенца', src: 'all/1-layer.png' },
+    { title: 'Микрофибра 30*30 <br> (Салфетка для пыли)', src: 'all/micro.png' },
   ];
 }
 </script>
@@ -44,31 +45,32 @@ export default class AllProducts extends Vue {
 
 <style scoped lang="stylus">
 .allProducts
-  background-image url('/products/gray.png')
-  margin-top -7rem
+  background-image: url('/products/gray.png');
+  margin-top: -7rem;
   .container
-    padding-top 6rem
+    padding-top: 6rem;
 
 .col-5
-  text-align center
-  margin 3rem 0
+  text-align: center;
+  margin: 3rem 0;
   .text
-    font-size 2rem
-    margin-bottom 1rem
+    font-size: 2rem;
+    margin-bottom: 1rem
   .my-btn
-    margin-left auto
-  
+    margin-left: auto
+
 .offer
-  background-color #15101f
-  text-transform uppercase
-  color #fefefe
-  font-size 3rem
-  text-align center
+  background-color: #15101f
+  text-transform: uppercase
+  color: #fefefe
+  font-size: 3rem
+  text-align: center
 
 .col-4
-  margin 5rem 0 2rem 0
+  margin: 5rem 0 2rem 0
 
 .justify-content-between
-  padding 2rem 0
+  padding: 2rem 0;
+
 
 </style>

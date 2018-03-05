@@ -6,7 +6,11 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "test": "vue-cli-service test",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "postbuild": "react-snap"
+  },
+  "reactSnap": {
+    "source": "dist"
   },
   "dependencies": {
     "bootstrap": "^4.0.0",
@@ -30,6 +34,7 @@
     "@vue/test-utils": "^1.0.0-beta.10",
     "babel-core": "^7.0.0-0",
     "lint-staged": "^6.0.0",
+    "react-snap": "^1.11.4",
     "rucksack-css": "^1.0.2",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.1",

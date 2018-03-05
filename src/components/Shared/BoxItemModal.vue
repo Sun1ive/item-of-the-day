@@ -1,10 +1,10 @@
 <template>
   <div class="modal">
-    <div class="BoxItemWrapper">
+    <div class="boxItem__wrapper">
       <div class="border">
-        <slot name="image" />
+        <img :src="src" :alt="alt">
       </div>
-      <div class="cart__actions">
+      <div class="boxItem__actions">
         <div class="increment" @click="increment">+</div>
         <div class="quantity">{{ quantity }}</div>
         <div class="decrement" @click="decrement">-</div>
@@ -17,19 +17,48 @@
 import Vue from 'vue';
 
 export default Vue.extend({
+  props: {
+    src: {
+      type: String,
+      required: true,
+    },
+    title: {
+      type: String,
+      required: true,
+    },
+    price: {
+      type: Number,
+      required: true,
+    },
+    id: {
+      type: Number,
+      required: true,
+    },
+    alt: {
+      type: String,
+      required: true,
+    },
+  },
   data: () => ({
     quantity: 0,
   }),
   methods: {
+    increment() {
+      this.$store.commit('increment', {
+        title: this.title,
+        item: this.src,
+        price: this.price,
+        id: this.id,
+      });
+      this.quantity += 1;
+    },
     decrement() {
       if (this.quantity > 0) {
+        this.$store.commit('decrement', {
+          item: this.src,
+        });
         this.quantity -= 1;
-        this.$emit('decrement');
       }
-    },
-    increment() {
-      this.$emit('increment', this.$slots.image[0].data.attrs.src);
-      this.quantity += 1;
     },
   },
 });
@@ -37,7 +66,7 @@ export default Vue.extend({
 
 
 <style scoped lang="stylus">
-.BoxItemWrapper
+.boxItem__wrapper
   overflow hidden
   min-width 200px
   min-height 150px
@@ -47,7 +76,7 @@ export default Vue.extend({
   border 5px solid #dcd7e9
   margin 1rem 0
 
-.cart__actions
+.boxItem__actions
   display flex
   align-items center
   justify-content center
@@ -56,7 +85,7 @@ export default Vue.extend({
 .decrement
   font-size 4rem
   cursor pointer
-  padding 1rem
+  padding 0 1rem
 
 .quantity
   background-color #dcd7e9

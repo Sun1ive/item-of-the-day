@@ -10,6 +10,7 @@ import VueAwesomeSwiper from 'vue-awesome-swiper';
 import 'swiper/dist/css/swiper.css';
 import 'bootstrap/dist/css/bootstrap-grid.min.css';
 import App from './App.vue';
+import store from './store';
 import './registerServiceWorker';
 import './styles/main.styl';
 
@@ -29,5 +30,6 @@ Vue.use(VueScrollTo, {
 });
 
 new Vue({
+  store,
   render: h => h(App),
 }).$mount('#app');

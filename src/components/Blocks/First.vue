@@ -36,9 +36,12 @@
       <BoxItemModal
         v-for="(item, i) in slider"
         :key="i"
-        @increment="increment"
-      ><img slot="image" :src="item.src">
-      </BoxItemModal>
+        :src="item.src"
+        :price="item.price"
+        :alt="item.alt"
+        :id="item.id"
+        :title="item.title"
+      />
     </Modal>
   </div>
 </template>
@@ -55,32 +58,42 @@ export default Vue.extend({
     showModal: false as boolean,
     slider: [
       {
+        title: 'Hello',
         src: '/3-layers.png',
         price: 21,
+        alt: 'Awesome Item',
+        id: 1,
       },
       {
+        title: 'Hello',
         src: '/2-layers.png',
-        price: 21,
+        price: 55,
+        alt: 'Awesome Item',
+        id: 2,
       },
       {
+        title: 'Hello',
         src: '/3-layers.png',
-        price: 21,
+        price: 31,
+        alt: 'Awesome Item',
+        id: 3,
       },
       {
+        title: 'Hello',
         src: '/3-layers.png',
-        price: 21,
+        price: 29,
+        alt: 'Awesome Item',
+        id: 4,
       },
       {
+        title: 'Hello',
         src: '/3-layers.png',
         price: 21,
+        alt: 'Awesome Item',
+        id: 5,
       },
-    ] as Array<{ src: string; price: number }>,
+    ] as Array<{ title: string; src: string; price: number; alt: string; id: number }>,
   }),
-  methods: {
-    increment() {
-      console.log('213');
-    },
-  },
 });
 </script>
 

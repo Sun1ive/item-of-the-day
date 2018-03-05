@@ -1,20 +1,9 @@
 import Vue from 'vue';
-import 'bootstrap/dist/css/bootstrap-grid.min.css';
-
 import App from './App.vue';
-import './style/main.styl';
-import './registerServiceWorker';
-
-import Button from '@/components/Shared/Button.vue';
-import ProductContainer from '@/components/Shared/ProductContainer.vue';
-import Box from '@/components/Shared/Box.vue';
-
-Vue.component('Btn', Button);
-Vue.component('ProductContainer', ProductContainer);
-Vue.component('Box', Box);
+import './registerServiceWorker.ts';
 
 Vue.config.productionTip = false;
 
 new Vue({
-  render: h => h(App),
+  render: (h) => h(App),
 }).$mount('#app');

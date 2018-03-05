@@ -15,10 +15,26 @@
             >Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas numquam ullam expedita
             incidunt necessitatibus consectetur, provident, voluptatem fuga repellat
             molestiae alias laborum sunt rerum molestias amet quisquam dolores culpa eius.</p>
+            <Btn
+              slot="button"
+              :cart="true"
+              :height="55"
+              :width="220"
+              :iconWidth="30"
+              :iconHeight="30"
+              class="btn"
+              @click.native="showModal = !showModal"
+            >Add to</Btn>
           </ProductContainer>
         </div>
       </div>
     </div>
+    <Modal
+      v-if="showModal"
+      @close="showModal = !showModal"
+    >
+      <h1>hello world!</h1>
+    </Modal>
   </div>
 </template>
 
@@ -31,6 +47,7 @@ export default Vue.extend({
     Slider,
   },
   data: () => ({
+    showModal: false as boolean,
     slider: ['/3-layers.png', '/3-layers.png', '/3-layers.png', '/3-layers.png'] as string[],
   }),
   methods: {

@@ -30,14 +30,7 @@
           </div>
         </div>
       </div>
-      <Btn
-        :cart="true"
-        :height="55"
-        :width="220"
-        :iconWidth="30"
-        :iconHeight="30"
-        class="btn"
-      >Add to</Btn>
+      <slot name="button" />
     </div>
   </div>
 </template>

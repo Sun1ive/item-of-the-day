@@ -5,6 +5,8 @@
     <Second />
     <Discount />
     <Third />
+    <Fourth />
+    <Order />
   </main>
 </template>
 
@@ -15,6 +17,8 @@ import First from '../Blocks/First.vue';
 import Second from '../Blocks/Second.vue';
 import Discount from '../Blocks/Discount.vue';
 import Third from '../Blocks/Third.vue';
+import Fourth from '../Blocks/Fourth.vue';
+import Order from '../Blocks/Order.vue';
 
 export default Vue.extend({
   components: {
@@ -23,6 +27,8 @@ export default Vue.extend({
     Discount,
     Second,
     Third,
+    Fourth,
+    Order,
   },
 });
 </script>

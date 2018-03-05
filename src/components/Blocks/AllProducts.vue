@@ -71,7 +71,7 @@ export default Vue.extend({
   font-size: responsive 2rem 3rem
   font-family 'MyriadPro', Arial, serif
   text-align: center;
-  height 34px
+  height 44px
   margin-top 9rem
 
 </style>

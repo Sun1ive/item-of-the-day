@@ -50,9 +50,7 @@ export default Vue.extend({
     showModal: false as boolean,
     slider: ['/2-layers.png', '/2-layers.png', '/2-layers.png', '/2-layers.png'] as string[],
   }),
-  methods: {
-    test() {},
-  },
+  methods: {},
 });
 </script>
 

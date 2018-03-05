@@ -3,6 +3,7 @@
     <div class="container">
       <div class="row">
         <div class="col discount__box">
+          <div class="discount__image" />
         </div>
       </div>
     </div>
@@ -10,29 +11,31 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
+import Vue from 'vue';
 
-@Component
-export default class Discount extends Vue {}
+export default Vue.extend({});
 </script>
 
 
 <style scoped lang="stylus">
 .discount
-  background-image url('/products/yellow.png')
+  background-image url('/yellow.png')
   background-position center
   background-size cover
-  height 500px
+  height 700px
+  z-index 0
   margin-top -7rem
   display flex
   justify-content center
   align-items center
-  &__box
-    border 3px dashed #E07400
-    display flex
-    align-items center
-    justify-content center
-    min-height 250px
+  &__image
+    background-image url('/discount_image.png')
+    height 470px
+    width 100%
+    background-position center center
+    background-size cover
+    background-repeat no-repeat
+    margin-top 2rem
     div
       flex-grow 1
 </style>

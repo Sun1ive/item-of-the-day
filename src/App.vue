@@ -2,26 +2,26 @@
   <div id="app">
     <Header />
     <Main />
-    <Footer />
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
-import Header from '@/components//Layout/Header.vue';
-import Main from '@/components/Layout/Main.vue';
-import Footer from '@/components/Layout/Footer.vue';
+import Vue from 'vue';
+import Header from '@/components/layout/Header.vue';
+import Main from '@/components/layout/Main.vue';
+import Footer from '@/components/layout/Footer.vue';
 
-@Component({
+export default Vue.extend({
   components: {
     Header,
     Main,
     Footer,
   },
-})
-export default class App extends Vue {}
+});
 </script>
 
-<style>
+<style lang="stylus">
+body
+  font-family: 'MyriadPro', Arial, Helvetica, sans-serif;
 
 </style>

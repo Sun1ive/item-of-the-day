@@ -1,20 +1,35 @@
 import Vue from 'vue';
-import 'bootstrap/dist/css/bootstrap-grid.min.css';
-
-import App from './App.vue';
-import './style/main.styl';
-import './registerServiceWorker';
-
-import Button from '@/components/Shared/Button.vue';
-import ProductContainer from '@/components/Shared/ProductContainer.vue';
 import Box from '@/components/Shared/Box.vue';
-
-Vue.component('Btn', Button);
-Vue.component('ProductContainer', ProductContainer);
-Vue.component('Box', Box);
+import Btn from '@/components/Shared/Button.vue';
+import Modal from '@/components/Shared/Modal.vue';
+import BoxItemModal from '@/components/Shared/BoxItemModal.vue';
+import ProductContainer from '@/components/Shared/ProductContainer.vue';
+import VueScrollTo from 'vue-scrollto';
+import VueAwesomeSwiper from 'vue-awesome-swiper';
+/* eslint-disable import/no-extraneous-dependencies */
+import 'swiper/dist/css/swiper.css';
+import 'bootstrap/dist/css/bootstrap-grid.min.css';
+import App from './App.vue';
+import store from './store';
+import './registerServiceWorker';
+import './styles/main.styl';
 
 Vue.config.productionTip = false;
+Vue.component('Box', Box);
+Vue.component('Btn', Btn);
+Vue.component('Modal', Modal);
+Vue.component('BoxItemModal', BoxItemModal);
+Vue.component('ProductContainer', ProductContainer);
+
+Vue.use(VueAwesomeSwiper);
+Vue.use(VueScrollTo, {
+  container: 'body',
+  duration: 700,
+  easing: 'ease',
+  offset: 0,
+});
 
 new Vue({
+  store,
   render: h => h(App),
 }).$mount('#app');

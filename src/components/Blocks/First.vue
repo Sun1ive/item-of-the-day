@@ -5,33 +5,107 @@
         <div class="col">
           <ProductContainer>
             <h1 slot="item-head">Сувенирные подушечки с лавандой внутнри</h1>
-            <img slot="item-image" src="/all/3-layers.png" alt="3 pillows">
+            <Slider slot="item-image" :slider="slider" />
             <div slot="item-size">40*40</div>
             <div slot="item-composition">flowers of lavender, sintepon</div>
             <div slot="item-price">$29</div>
-            <p class="text" slot="item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas numquam ullam expedita incidunt necessitatibus consectetur, provident, voluptatem fuga repellat molestiae alias laborum sunt rerum molestias amet quisquam dolores culpa eius.</p>
+            <p
+              slot="item-text"
+              class="text"
+            >Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas numquam ullam expedita
+            incidunt necessitatibus consectetur, provident, voluptatem fuga repellat
+            molestiae alias laborum sunt rerum molestias amet quisquam dolores culpa eius.</p>
+            <Btn
+              slot="button"
+              :cart="true"
+              :height="55"
+              :width="220"
+              :iconWidth="30"
+              :iconHeight="30"
+              class="btn"
+              @click.native="showModal = !showModal"
+            >Add to</Btn>
           </ProductContainer>
         </div>
       </div>
     </div>
+    <Modal
+      v-if="showModal"
+      @close="showModal = !showModal"
+    >
+      <BoxItemModal
+        v-for="(item, i) in slider"
+        :key="i"
+        :src="item.src"
+        :price="item.price"
+        :alt="item.alt"
+        :id="item.id"
+        :title="item.title"
+      />
+    </Modal>
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
+import Vue from 'vue';
+import Slider from '../Shared/Slider.vue';
 
-@Component
-export default class First extends Vue {}
+export default Vue.extend({
+  components: {
+    Slider,
+  },
+  data: () => ({
+    showModal: false as boolean,
+    slider: [
+      {
+        title: 'Hello',
+        src: '/3-layers.png',
+        price: 21,
+        alt: 'Awesome Item',
+        id: 1,
+      },
+      {
+        title: 'Hello',
+        src: '/2-layers.png',
+        price: 55,
+        alt: 'Awesome Item',
+        id: 2,
+      },
+      {
+        title: 'Hello',
+        src: '/3-layers.png',
+        price: 31,
+        alt: 'Awesome Item',
+        id: 3,
+      },
+      {
+        title: 'Hello',
+        src: '/3-layers.png',
+        price: 29,
+        alt: 'Awesome Item',
+        id: 4,
+      },
+      {
+        title: 'Hello',
+        src: '/3-layers.png',
+        price: 21,
+        alt: 'Awesome Item',
+        id: 5,
+      },
+    ] as Array<{ title: string; src: string; price: number; alt: string; id: number }>,
+  }),
+});
 </script>
 
 
 <style scoped lang="stylus">
 .first
-  background-image url('/products/first.png')
-  background-position center
-  background-size cover
-  height 1080px
-  display flex
-  justify-content center
-  align-items center
+  background-image: url('/first.png');
+  background-position: center;
+  background-size: cover;
+  height: 1080px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 </style>

@@ -12,15 +12,15 @@
         </div>
         <div class="col-8">
           <div class="flex">
-            <img src="/icons/line.png" alt="size">
+            <img src="../../assets/line.png" alt="size">
             <slot name="item-size" />
           </div>
           <div class="flex">
-            <img src="/icons/spin.png" alt="composition">
+            <img src="../../assets/spin.png" alt="composition">
             <slot name="item-composition" />
           </div>
           <div class="flex">
-            <img src="/icons/label.png" alt="price">
+            <img src="../../assets/label.png" alt="price">
             <span class="yellow">
               <slot name="item-price" />
             </span>
@@ -30,23 +30,16 @@
           </div>
         </div>
       </div>
-      <Btn 
-        class="btn" 
-        :cart="true"
-        :height="50"
-        :width="220"
-        :iconWidth="30"
-        :iconHeight="30"
-      >Add to</Btn>
+      <slot name="button" />
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
+import Vue from 'vue';
 
-@Component
-export default class ProductContainer extends Vue {}
+export default Vue.extend({});
+
 </script>
 
 
@@ -68,4 +61,5 @@ export default class ProductContainer extends Vue {}
   .btn
     color #333
     margin-left auto
+    font-size responsive 1rem 2rem
 </style>

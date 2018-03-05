@@ -2,22 +2,26 @@
   <div class="allProducts">
     <div class="container">
       <div class="row justify-content-center">
-        <div class="col-4">
+        <div class="col-3">
           <div class="offer">We offer</div>
         </div>
       </div>
       <div class="row justify-content-between">
-        <div 
-          class="col-5" 
-          v-for="item in products" 
+        <div
+          v-for="item in products"
           :key="item.title"
+          class="col-5"
         >
           <div class="text" v-html="item.title" />
           <Box>
             <img :src="item.src" :alt="item.title">
           </Box>
-          <Btn 
-            :icon="item.icon"
+          <Btn
+            v-scroll-to="`${item.el}`"
+            :width="170"
+            :arrow="true"
+            :iconWidth="30"
+            :iconHeight="16"
             class="my-btn"
           >Look</Btn>
         </div>
@@ -27,48 +31,47 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
-import { ProductTypes } from '@/Types/Types.ts';
+import Vue from 'vue';
 
-@Component
-export default class AllProducts extends Vue {
-  private products: ProductTypes[] = [
-    { title: 'Сувенирные подушечки <br> с лавандой внутнри', src: 'all/3-layers.png', icon: '/svg/arrows.svg' },
-    { title: 'Наволочки с принтом <br> декоративные 40*40', src: 'all/2-layers.png', icon: '/svg/arrows.svg' },
-    { title: 'Вафельные кухонные <br> полотенца', src: 'all/1-layer.png', icon: '/svg/arrows.svg' },
-    { title: 'Микрофибра 30*30 <br> (Салфетка для пыли)', src: 'all/micro.png', icon: '/svg/arrows.svg' },
-  ];
-}
+export default Vue.extend({
+  data: () => ({
+    products: [
+      { title: 'Сувенирные подушечки <br> с лавандой внутнри', src: '3-layers.png', el: '.first' },
+      { title: 'Наволочки с принтом <br> декоративные 40*40', src: '2-layers.png', el: '.second' },
+      { title: 'Вафельные кухонные <br> полотенца', src: '1-layer.png', el: '.third' },
+      { title: 'Микрофибра 30*30 <br> (Салфетка для пыли)', src: 'micro.png', el: '.fourth' },
+    ],
+  }),
+});
 </script>
 
 
 <style scoped lang="stylus">
 .allProducts
-  background-image url('/products/gray.png')
-  margin-top -7rem
+  background-image: url('/gray.png');
+  margin-top: -10.5rem;
   .container
-    padding-top 6rem
+    padding-top: 6rem
 
 .col-5
-  text-align center
-  margin 3rem 0
+  text-align: center;
+  margin: 3rem 0;
   .text
-    font-size 2rem
-    margin-bottom 1rem
+    font-size: responsive 2rem 3.5rem
+    color #2e2444
+    margin-bottom: 1rem;
   .my-btn
-    margin-left auto
-  
+    margin-left: auto;
+    font-size responsive 1rem 2rem
+
 .offer
-  background-color #15101f
-  text-transform uppercase
-  color #fefefe
-  font-size 3rem
-  text-align center
-
-.col-4
-  margin 5rem 0 2rem 0
-
-.justify-content-between
-  padding 2rem 0
+  background-color: #15101f;
+  text-transform: uppercase;
+  color: #fefefe;
+  font-size: responsive 2rem 3rem
+  font-family 'MyriadPro', Arial, serif
+  text-align: center;
+  height 34px
+  margin-top 9rem
 
 </style>

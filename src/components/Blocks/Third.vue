@@ -4,35 +4,70 @@
       <div class="row">
         <div class="col">
           <ProductContainer>
-            <h1 slot="item-head">Наволочки с принтом декоративные</h1>
-            <img slot="item-image" src="/all/1-layer.png" alt="one-pillow">
-            <div slot="item-size">50*40</div>
-            <div slot="item-composition">sintepon</div>
+            <h1 slot="item-head">Вафельные кухонные полотенца</h1>
+            <Slider
+              slot="item-image"
+              :slider="slider"
+              :height="170"
+            />
+            <div slot="item-size">40*40</div>
+            <div slot="item-composition">flowers of lavender, sintepon</div>
             <div slot="item-price">$19</div>
-            <p class="text" slot="item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas numquam ullam expedita incidunt necessitatibus consectetur, provident, voluptatem fuga repellat molestiae alias laborum sunt rerum molestias amet quisquam dolores culpa eius.</p>
+            <p
+              slot="item-text"
+              class="text"
+            >Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas numquam ullam expedita
+            incidunt necessitatibus consectetur, provident, voluptatem fuga repellat
+            molestiae alias laborum sunt rerum molestias amet quisquam dolores culpa eius.</p>
+            <Btn
+              slot="button"
+              :cart="true"
+              :height="55"
+              :width="220"
+              :iconWidth="30"
+              :iconHeight="30"
+              class="btn"
+              @click.native="showModal = !showModal"
+            >Add to</Btn>
           </ProductContainer>
         </div>
       </div>
     </div>
+    <Modal
+      v-if="showModal"
+      @close="showModal = !showModal"
+    >
+      <h1>hello world!</h1>
+    </Modal>
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
+import Vue from 'vue';
+import Slider from '../Shared/Slider.vue';
 
-@Component
-export default class Third extends Vue {}
+export default Vue.extend({
+  components: {
+    Slider,
+  },
+  data: () => ({
+    showModal: false as boolean,
+    slider: ['/1-layer.png', '/1-layer.png', '/1-layer.png', '/1-layer.png'] as string[],
+  }),
+  methods: {},
+});
 </script>
 
 
 <style scoped lang="stylus">
 .third
-  margin-top -7rem
-  background-image url('/products/third.png')
-  background-position center
-  background-size cover
-  height 1080px
-  display flex
-  justify-content center
-  align-items center
+  background-image: url('/third.png')
+  background-position: center
+  background-size: cover
+  height: 1078px
+  display: flex
+  justify-content: center
+  align-items: center
+  margin-top -6.5rem
+
 </style>

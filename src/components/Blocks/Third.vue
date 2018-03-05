@@ -71,5 +71,6 @@ export default Vue.extend({
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top -6.5rem
 
 </style>

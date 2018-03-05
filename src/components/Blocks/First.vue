@@ -9,10 +9,8 @@
             <div slot="item-size">40*40</div>
             <div slot="item-composition">flowers of lavender, sintepon</div>
             <div slot="item-price">$29</div>
-            <p
-              slot="item-text"
-              class="text"
-            >Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas numquam ullam expedita
+            <p slot="item-text" class="text">Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Quas numquam ullam expedita
             incidunt necessitatibus consectetur, provident, voluptatem fuga repellat
             molestiae alias laborum sunt rerum molestias amet quisquam dolores culpa eius.</p>
             <Btn
@@ -41,6 +39,7 @@
         :alt="item.alt"
         :id="item.id"
         :title="item.title"
+        :type="item.type"
       />
     </Modal>
   </div>

@@ -7,8 +7,8 @@
           <div class="text__wrapper">
             <div>Сувенирные подушечки с лавандой</div>
             <div class="text__item">
-              <div class="quantity">10</div>
-              <div class="total">29$</div>
+              <div class="quantity">QUANTITY PROP</div>
+              <div class="total">TOTAL TYPE X 29$</div>
             </div>
             <div class="more">...more</div>
           </div>

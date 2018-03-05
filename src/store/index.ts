@@ -1,14 +1,22 @@
 import Vue from 'vue';
-import Puex from 'puex';
+import Vuex from 'vuex';
 import { IProduct } from '../types/types';
 
-Vue.use(Puex);
+Vue.use(Vuex);
 
 interface IState {
   cart: any[];
+  typeOne: Array<{
+    title: string;
+    src: string;
+    price: number;
+    alt: string;
+    id: number;
+    type: string;
+  }>;
 }
 
-export default new Puex({
+export default new Vuex.Store({
   state: {
     cart: [],
     typeOne: [

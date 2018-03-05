@@ -15,6 +15,7 @@
 
 <script lang="ts">
 import Vue from 'vue';
+import { IProductsArray } from '../../types/types';
 
 export default Vue.extend({
   props: {
@@ -38,12 +39,16 @@ export default Vue.extend({
       type: String,
       required: true,
     },
+    type: {
+      type: String,
+      required: true,
+    },
   },
   data: () => ({
     quantity: 0,
   }),
   created() {
-    this.quantity = this.$store.state.cart.filter(x => x.id === this.id).length;
+    this.quantity = this.$store.state.cart.filter((x: IProductsArray) => x.id === this.id).length;
   },
   methods: {
     increment() {
@@ -52,6 +57,7 @@ export default Vue.extend({
         item: this.src,
         price: this.price,
         id: this.id,
+        type: this.type,
       });
       this.quantity += 1;
     },

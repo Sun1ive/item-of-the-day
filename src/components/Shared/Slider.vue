@@ -4,7 +4,11 @@
       v-for="(slide, i) in slider"
       :key="i"
     ><div
-      :style="{ background: 'url(' + slide + ')', }"
+      :style="{
+        background: 'url(' + slide + ')',
+        width: width + 'px',
+        height: height + 'px',
+      }"
       class="image-item"
     />
     </swiper-slide>
@@ -23,6 +27,14 @@ export default Vue.extend({
       type: Array,
       required: true,
     },
+    height: {
+      type: Number,
+      default: 200,
+    },
+    width: {
+      type: Number,
+      default: 220,
+    },
   },
   data: () => ({
     swiperOptions,
@@ -33,8 +45,7 @@ export default Vue.extend({
 
 <style scoped lang="stylus">
 .image-item
-  width 220px
-  height 200px
   background-repeat no-repeat !important
   background-size cover !important
+  background-position center center !important
 </style>

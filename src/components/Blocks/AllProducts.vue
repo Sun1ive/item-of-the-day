@@ -2,7 +2,7 @@
   <div class="allProducts">
     <div class="container">
       <div class="row justify-content-center">
-        <div class="col-4">
+        <div class="col-3">
           <div class="offer">We offer</div>
         </div>
       </div>
@@ -50,24 +50,25 @@ export default Vue.extend({
   .container
     padding-top: 6rem
 
-// .col-5
-//   text-align: center;
-//   margin: 3rem 0;
-//   .text
-//     font-size: 2rem;
-//     margin-bottom: 1rem;
-//   .my-btn
-//     margin-left: auto;
+.col-5
+  text-align: center;
+  margin: 3rem 0;
+  .text
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  .my-btn
+    margin-left: auto;
+    font-size responsive 1rem 2rem
 
-// .offer
-//   background-color: #15101f;
-//   text-transform: uppercase;
-//   color: #fefefe;
-//   font-size: 3rem;
-//   text-align: center;
-
-// .col-4
-//   margin: 5rem 0 2rem 0;
+.offer
+  background-color: #15101f;
+  text-transform: uppercase;
+  color: #fefefe;
+  font-size: responsive 2rem 3rem
+  font-family 'MyriadPro', Arial, serif
+  text-align: center;
+  height 34px
+  margin-top 7rem
 
 </style>
 

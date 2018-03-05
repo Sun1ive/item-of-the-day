@@ -22,7 +22,7 @@ export default Vue.extend({});
   align-items: center;
   margin: 0 auto;
   img
-    width: 85%;
+    width: 90%;
     height: 85%;
 
 </style>

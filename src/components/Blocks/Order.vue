@@ -3,8 +3,7 @@
     <div class="container">
       <div class="row justify-content-between">
         <div class="col-5">
-          <h1>hello there</h1>
-          <h1>TOtal Price : {{ totalPrice }}</h1>
+          <Cart />
         </div>
         <div class="col-6">
           <Form />
@@ -17,11 +16,13 @@
 <script lang="ts">
 import Vue from 'vue';
 import Form from '../Shared/Form.vue';
+import Cart from './Cart.vue';
 import { IProduct } from '../../types/types';
 
 export default Vue.extend({
   components: {
     Form,
+    Cart,
   },
   computed: {
     totalPrice(): number {

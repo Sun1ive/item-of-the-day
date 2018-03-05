@@ -42,6 +42,9 @@ export default Vue.extend({
   data: () => ({
     quantity: 0,
   }),
+  created() {
+    this.quantity = this.$store.state.cart.filter(x => x.id === this.id).length;
+  },
   methods: {
     increment() {
       this.$store.commit('increment', {
@@ -66,30 +69,33 @@ export default Vue.extend({
 
 
 <style scoped lang="stylus">
-.boxItem__wrapper
-  overflow hidden
-  min-width 200px
-  min-height 150px
-  margin 0 1rem
+.boxItem__wrapper {
+  overflow: hidden;
+  min-width: 200px;
+  min-height: 150px;
+  margin: 0 1rem;
+}
 
-.border
-  border 5px solid #dcd7e9
-  margin 1rem 0
+.border {
+  border: 5px solid #dcd7e9;
+  margin: 1rem 0;
+}
 
-.boxItem__actions
-  display flex
-  align-items center
-  justify-content center
+.boxItem__actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-.increment
-.decrement
-  font-size 4rem
-  cursor pointer
-  padding 0 1rem
+.increment, .decrement {
+  font-size: 4rem;
+  cursor: pointer;
+  padding: 0 1rem;
+}
 
-.quantity
-  background-color #dcd7e9
-  padding 0.1rem 2rem
-  font-size 2rem
-
+.quantity {
+  background-color: #dcd7e9;
+  padding: 0.1rem 2rem;
+  font-size: 2rem;
+}
 </style>

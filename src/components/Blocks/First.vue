@@ -49,6 +49,7 @@
 <script lang="ts">
 import Vue from 'vue';
 import Slider from '../Shared/Slider.vue';
+import { IProductsArray } from '../../types/types';
 
 export default Vue.extend({
   components: {
@@ -56,44 +57,12 @@ export default Vue.extend({
   },
   data: () => ({
     showModal: false as boolean,
-    slider: [
-      {
-        title: 'Hello',
-        src: '/3-layers.png',
-        price: 21,
-        alt: 'Awesome Item',
-        id: 1,
-      },
-      {
-        title: 'Hello',
-        src: '/2-layers.png',
-        price: 55,
-        alt: 'Awesome Item',
-        id: 2,
-      },
-      {
-        title: 'Hello',
-        src: '/3-layers.png',
-        price: 31,
-        alt: 'Awesome Item',
-        id: 3,
-      },
-      {
-        title: 'Hello',
-        src: '/3-layers.png',
-        price: 29,
-        alt: 'Awesome Item',
-        id: 4,
-      },
-      {
-        title: 'Hello',
-        src: '/3-layers.png',
-        price: 21,
-        alt: 'Awesome Item',
-        id: 5,
-      },
-    ] as Array<{ title: string; src: string; price: number; alt: string; id: number }>,
   }),
+  computed: {
+    slider(): IProductsArray[] {
+      return this.$store.state.typeOne;
+    },
+  },
 });
 </script>
 

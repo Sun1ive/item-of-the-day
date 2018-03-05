@@ -17,8 +17,10 @@
             <img :src="item.src" :alt="item.title">
           </Box>
           <Btn
-            :width="150"
+            :width="170"
             :arrow="true"
+            :iconWidth="30"
+            :iconHeight="16"
             class="my-btn"
           >Look</Btn>
         </div>
@@ -54,7 +56,8 @@ export default Vue.extend({
   text-align: center;
   margin: 3rem 0;
   .text
-    font-size: 2rem;
+    font-size: responsive 2rem 3.5rem
+    color #2e2444
     margin-bottom: 1rem;
   .my-btn
     margin-left: auto;
@@ -68,7 +71,7 @@ export default Vue.extend({
   font-family 'MyriadPro', Arial, serif
   text-align: center;
   height 34px
-  margin-top 7rem
+  margin-top 9rem
 
 </style>
 

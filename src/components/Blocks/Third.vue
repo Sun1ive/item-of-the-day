@@ -55,8 +55,7 @@ export default Vue.extend({
     slider: ['/1-layer.png', '/1-layer.png', '/1-layer.png', '/1-layer.png'] as string[],
   }),
   methods: {
-    test() {
-    },
+    test() {},
   },
 });
 </script>
@@ -64,13 +63,13 @@ export default Vue.extend({
 
 <style scoped lang="stylus">
 .third
-  background-image: url('/third.png');
-  background-position: center;
-  background-size: cover;
-  height: 1078px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-image: url('/third.png')
+  background-position: center
+  background-size: cover
+  height: 1078px
+  display: flex
+  justify-content: center
+  align-items: center
   margin-top -6.5rem
 
 </style>

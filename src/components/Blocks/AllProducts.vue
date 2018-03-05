@@ -17,6 +17,7 @@
             <img :src="item.src" :alt="item.title">
           </Box>
           <Btn
+            v-scroll-to="`${item.el}`"
             :width="170"
             :arrow="true"
             :iconWidth="30"
@@ -35,10 +36,10 @@ import Vue from 'vue';
 export default Vue.extend({
   data: () => ({
     products: [
-      { title: 'Сувенирные подушечки <br> с лавандой внутнри', src: '3-layers.png' },
-      { title: 'Наволочки с принтом <br> декоративные 40*40', src: '2-layers.png' },
-      { title: 'Вафельные кухонные <br> полотенца', src: '1-layer.png' },
-      { title: 'Микрофибра 30*30 <br> (Салфетка для пыли)', src: 'micro.png' },
+      { title: 'Сувенирные подушечки <br> с лавандой внутнри', src: '3-layers.png', el: '.first' },
+      { title: 'Наволочки с принтом <br> декоративные 40*40', src: '2-layers.png', el: '.second' },
+      { title: 'Вафельные кухонные <br> полотенца', src: '1-layer.png', el: '.third' },
+      { title: 'Микрофибра 30*30 <br> (Салфетка для пыли)', src: 'micro.png', el: '.fourth' },
     ],
   }),
 });
@@ -74,4 +75,3 @@ export default Vue.extend({
   margin-top 9rem
 
 </style>
-

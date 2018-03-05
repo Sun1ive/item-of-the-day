@@ -15,9 +15,13 @@
 
 <script lang="ts">
 import Vue from 'vue';
+import Form from '../Shared/Form.vue';
 
-export default Vue.extend({});
-
+export default Vue.extend({
+  components: {
+    Form,
+  },
+});
 </script>
 
 

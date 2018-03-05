@@ -55,8 +55,7 @@ export default Vue.extend({
     slider: ['/micro.png', '/micro.png', '/micro.png', '/micro.png'] as string[],
   }),
   methods: {
-    test() {
-    },
+    test() {},
   },
 });
 </script>

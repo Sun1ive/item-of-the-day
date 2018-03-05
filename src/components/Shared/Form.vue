@@ -9,7 +9,6 @@
     <input
       v-model.lazy.number="user.phone"
       required
-      type="number"
       placeholder="Your phone"
     >
     <input
@@ -40,17 +39,18 @@ import Vue from 'vue';
 
 export default Vue.extend({
   data: () => ({
-    name: '',
-    phone: null,
-    email: '',
-    address: '',
-    additional: '',
+    user: {
+      name: '',
+      phone: null,
+      email: '',
+      address: '',
+      additional: '',
+    },
   }),
   methods: {
     onCheckout() {},
   },
 });
-
 </script>
 
 

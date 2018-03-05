@@ -5,7 +5,7 @@
         <slot name="image" />
       </div>
       <div class="cart__actions">
-        <div class="increment" @click="quantity++">+</div>
+        <div class="increment" @click="increment">+</div>
         <div class="quantity">{{ quantity }}</div>
         <div class="decrement" @click="decrement">-</div>
       </div>
@@ -24,7 +24,12 @@ export default Vue.extend({
     decrement() {
       if (this.quantity > 0) {
         this.quantity -= 1;
+        this.$emit('decrement');
       }
+    },
+    increment() {
+      this.$emit('increment', this.$slots.image[0].data.attrs.src);
+      this.quantity += 1;
     },
   },
 });

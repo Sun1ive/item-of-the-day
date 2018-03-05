@@ -36,6 +36,7 @@
       <BoxItemModal
         v-for="(item, i) in slider"
         :key="i"
+        @increment="increment"
       ><img slot="image" :src="item.src">
       </BoxItemModal>
     </Modal>
@@ -75,7 +76,11 @@ export default Vue.extend({
       },
     ] as Array<{ src: string; price: number }>,
   }),
-  methods: {},
+  methods: {
+    increment() {
+      console.log('213');
+    },
+  },
 });
 </script>
 

@@ -33,7 +33,11 @@
       v-if="showModal"
       @close="showModal = !showModal"
     >
-      <h1>hello world!</h1>
+      <BoxItemModal
+        v-for="(item, i) in slider"
+        :key="i"
+      ><img slot="image" :src="item.src">
+      </BoxItemModal>
     </Modal>
   </div>
 </template>
@@ -48,12 +52,30 @@ export default Vue.extend({
   },
   data: () => ({
     showModal: false as boolean,
-    slider: ['/3-layers.png', '/3-layers.png', '/3-layers.png', '/3-layers.png'] as string[],
+    slider: [
+      {
+        src: '/3-layers.png',
+        price: 21,
+      },
+      {
+        src: '/2-layers.png',
+        price: 21,
+      },
+      {
+        src: '/3-layers.png',
+        price: 21,
+      },
+      {
+        src: '/3-layers.png',
+        price: 21,
+      },
+      {
+        src: '/3-layers.png',
+        price: 21,
+      },
+    ] as Array<{ src: string; price: number }>,
   }),
-  methods: {
-    test() {
-    },
-  },
+  methods: {},
 });
 </script>
 

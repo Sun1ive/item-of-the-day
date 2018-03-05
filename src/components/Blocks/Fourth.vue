@@ -52,11 +52,14 @@ export default Vue.extend({
   },
   data: () => ({
     showModal: false as boolean,
-    slider: ['/micro.png', '/micro.png', '/micro.png', '/micro.png'] as string[],
+    slider: [
+      { src: '/micro.png', price: 24 },
+      { src: '/micro.png', price: 24 },
+      { src: '/micro.png', price: 24 },
+      { src: '/micro.png', price: 24 },
+    ],
   }),
-  methods: {
-    test() {},
-  },
+  methods: {},
 });
 </script>
 

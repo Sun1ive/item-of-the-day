@@ -4,8 +4,11 @@
       <div class="modal-wrapper">
         <div class="modal-container">
           <slot />
-          <button class="modal-default-button" @click="$emit('close')">OK</button>
         </div>
+        <div
+          class="modal-btn"
+          @click="$emit('close')"
+        />
       </div>
     </div>
   </transition>
@@ -26,25 +29,29 @@ export default Vue.extend({});
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, .5);
-  display: table;
-  transition: opacity .3s ease;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: opacity 0.3s ease;
 }
 
 .modal-wrapper {
-  display: table-cell;
-  vertical-align: middle;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  background-color: #fff;
 }
 
 .modal-container {
-  width: 300px;
+  width: 500px;
+  min-height: 300px;
   margin: 0px auto;
-  padding: 20px 30px;
   background-color: #fff;
   border-radius: 2px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
-  transition: all .3s ease;
-  font-family: Helvetica, Arial, sans-serif;
+  transition: all 0.3s ease;
+  font-family: 'MyriadPro', Helvetica, Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  overflow-x: scroll;
 }
 
 .modal-header h3 {
@@ -56,18 +63,20 @@ export default Vue.extend({});
   margin: 20px 0;
 }
 
-.modal-default-button {
-  float: right;
+.modal-btn {
+  background-image: url('../../assets/OK.png');
+  padding: 1.45rem;
+  background-color: orange;
+  background-position: center center;
+  background-repeat: no-repeat;
+  transition: .4s ease;
+  max-width: 50px;
+  margin-left: auto;
 }
-
-/*
- * The following styles are auto-applied to elements with
- * transition="modal" when their visibility is toggled
- * by Vue.js.
- *
- * You can easily play with the modal transition by editing
- * these styles.
- */
+.modal-btn:hover {
+  cursor: pointer;
+  background-color: orangered;
+}
 
 .modal-enter {
   opacity: 0;

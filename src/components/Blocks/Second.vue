@@ -51,8 +51,7 @@ export default Vue.extend({
     slider: ['/2-layers.png', '/2-layers.png', '/2-layers.png', '/2-layers.png'] as string[],
   }),
   methods: {
-    test() {
-    },
+    test() {},
   },
 });
 </script>

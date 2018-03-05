@@ -5,7 +5,7 @@
       :key="i"
     ><div
       :style="{
-        background: 'url(' + slide + ')',
+        background: 'url(' + slide.src + ')',
         width: width + 'px',
         height: height + 'px',
       }"

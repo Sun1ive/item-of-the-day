@@ -2,6 +2,7 @@ import Vue from 'vue';
 import Box from '@/components/Shared/Box.vue';
 import Btn from '@/components/Shared/Button.vue';
 import Modal from '@/components/Shared/Modal.vue';
+import BoxItemModal from '@/components/Shared/BoxItemModal.vue';
 import ProductContainer from '@/components/Shared/ProductContainer.vue';
 import VueScrollTo from 'vue-scrollto';
 import VueAwesomeSwiper from 'vue-awesome-swiper';
@@ -16,6 +17,7 @@ Vue.config.productionTip = false;
 Vue.component('Box', Box);
 Vue.component('Btn', Btn);
 Vue.component('Modal', Modal);
+Vue.component('BoxItemModal', BoxItemModal);
 Vue.component('ProductContainer', ProductContainer);
 
 Vue.use(VueAwesomeSwiper);

@@ -1,14 +1,14 @@
 <template>
-  <div class="container">
+  <div :class="{ none: !inCart }" class="container">
     <div class="row">
       <div class="col">
         <div class="item-box">
-          <img src="/3-layers.png" alt="">
+          <img :src="img" alt="Awesome Pillow">
           <div class="text__wrapper">
-            <div>Сувенирные подушечки с лавандой</div>
+            <div class="title">{{ title }}</div>
             <div class="text__item">
-              <div class="quantity">QUANTITY PROP</div>
-              <div class="total">TOTAL TYPE X 29$</div>
+              <div class="quantity">{{ quantity }}</div>
+              <div class="total">{{ total }}</div>
             </div>
             <div class="more">...more</div>
           </div>
@@ -20,12 +20,52 @@
 
 <script lang="ts">
 import Vue from 'vue';
+import { IProductsArray } from '../../types/types';
 
-export default Vue.extend({});
+export default Vue.extend({
+  props: {
+    title: {
+      type: String,
+      required: true,
+    },
+    type: {
+      type: String,
+      required: true,
+    },
+  },
+  computed: {
+    inCart(): boolean {
+      return this.quantity > 0;
+    },
+    quantity(): number {
+      return this.filtered.length;
+    },
+    img(): string {
+      return this.$store.state.cart
+        .filter((x: IProductsArray) => x.type === this.type)
+        .map((t: IProductsArray) => t.item)
+        .splice(0, 1);
+    },
+    filtered(): IProductsArray[] {
+      return this.$store.state.cart.filter((x: IProductsArray) => x.type === this.type);
+    },
+    total(): number {
+      if (this.filtered.length > 0) {
+        return this.filtered.reduce((acc, item) => acc + item.price, 0);
+      }
+      return 0;
+    },
+  },
+});
 </script>
 
 
 <style scoped lang="stylus">
+.none
+  opacity 0
+  visibility none
+
+
 .item-box
   width 100%
   padding 1rem

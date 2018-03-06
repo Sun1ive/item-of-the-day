@@ -10,4 +10,5 @@ export interface IProductsArray {
   alt: string;
   id: number;
   type: string;
+  item: string;
 }

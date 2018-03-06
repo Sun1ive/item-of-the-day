@@ -3,7 +3,18 @@
     <div class="container">
       <div class="row justify-content-between">
         <div class="col-5">
-          <Cart />
+          <Cart
+            :type="'one'"
+            :title="'Сувенирные подушечки с лавандой'"
+            style="margin-bottom: 1.5rem;"
+          />
+          <!-- <Cart
+            style="margin-bottom: 1.5rem;"
+          />
+          <Cart
+            style="margin-bottom: 1.5rem;"
+          />
+          <Cart /> -->
         </div>
         <div class="col-6">
           <Form />

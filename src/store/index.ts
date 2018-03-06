@@ -30,7 +30,7 @@ export default new Vuex.Store({
       },
       {
         title: 'Hello1',
-        src: '/2-layers.png',
+        src: '/3-layers.png',
         price: 55,
         alt: 'Awesome Item',
         id: 2,

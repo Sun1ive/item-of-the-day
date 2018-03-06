@@ -1,5 +1,5 @@
 <template>
-  <div :class="{ none: !inCart }" class="container">
+  <div v-if="inCart" class="container">
     <div class="row">
       <div class="col">
         <div class="item-box">
@@ -8,7 +8,7 @@
             <div class="title">{{ title }}</div>
             <div class="text__item">
               <div class="quantity">{{ quantity }}</div>
-              <div class="total">{{ total }}</div>
+              <div class="total">{{ total }}$</div>
             </div>
             <div class="more">...more</div>
           </div>
@@ -61,11 +61,6 @@ export default Vue.extend({
 
 
 <style scoped lang="stylus">
-.none
-  opacity 0
-  visibility none
-
-
 .item-box
   width 100%
   padding 1rem

@@ -8,13 +8,20 @@
             :title="'Сувенирные подушечки с лавандой'"
             style="margin-bottom: 1.5rem;"
           />
-          <!-- <Cart
+          <Cart
+            :type="'two'"
+            :title="'Наволочки с принтом декоративные'"
             style="margin-bottom: 1.5rem;"
           />
           <Cart
+            :type="'three'"
+            :title="'Вафельные кухонные полотенца'"
             style="margin-bottom: 1.5rem;"
           />
-          <Cart /> -->
+          <Cart
+            :type="'four'"
+            :title="'Микрофибра (Салфетка для пыли)'"
+          />
         </div>
         <div class="col-6">
           <Form />
@@ -34,14 +41,6 @@ export default Vue.extend({
   components: {
     Form,
     Cart,
-  },
-  computed: {
-    totalPrice(): number {
-      return this.$store.state.cart.reduce(
-        (acc: number, value: IProduct) => acc + value.price,
-        0,
-      );
-    },
   },
 });
 </script>

@@ -37,7 +37,16 @@
       v-if="showModal"
       @close="showModal = !showModal"
     >
-      <h1>hello world!</h1>
+      <BoxItemModal
+        v-for="(item, i) in slider"
+        :key="i"
+        :src="item.src"
+        :price="item.price"
+        :alt="item.alt"
+        :id="item.id"
+        :title="item.title"
+        :type="item.type"
+      />
     </Modal>
   </div>
 </template>
@@ -45,6 +54,7 @@
 <script lang="ts">
 import Vue from 'vue';
 import Slider from '../Shared/Slider.vue';
+import { IProductsArray } from '../../types/types';
 
 export default Vue.extend({
   components: {
@@ -52,14 +62,12 @@ export default Vue.extend({
   },
   data: () => ({
     showModal: false as boolean,
-    slider: [
-      { src: '/micro.png', price: 24 },
-      { src: '/micro.png', price: 24 },
-      { src: '/micro.png', price: 24 },
-      { src: '/micro.png', price: 24 },
-    ],
   }),
-  methods: {},
+  computed: {
+    slider(): IProductsArray[] {
+      return this.$store.state.typeFour;
+    },
+  },
 });
 </script>
 

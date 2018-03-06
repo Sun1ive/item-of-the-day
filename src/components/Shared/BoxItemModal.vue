@@ -75,33 +75,29 @@ export default Vue.extend({
 
 
 <style scoped lang="stylus">
-.boxItem__wrapper {
-  overflow: hidden;
-  min-width: 200px;
-  min-height: 150px;
-  margin: 0 1rem;
-}
+.boxItem__wrapper
+  overflow: hidden
+  min-width: 200px
+  min-height: 150px
+  margin: 0 1rem
 
-.border {
+.border
   border: 5px solid #dcd7e9;
   margin: 1rem 0;
-}
 
-.boxItem__actions {
+.boxItem__actions
   display: flex;
   align-items: center;
-  justify-content: center;
-}
+  justify-content: center
 
-.increment, .decrement {
+.increment, .decrement
   font-size: 4rem;
   cursor: pointer;
   padding: 0 1rem;
-}
 
-.quantity {
+.quantity
   background-color: #dcd7e9;
   padding: 0.1rem 2rem;
   font-size: 2rem;
-}
+
 </style>

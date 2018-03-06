@@ -10,7 +10,7 @@
               <div class="quantity">{{ quantity }}</div>
               <div class="total">{{ total }}$</div>
             </div>
-            <div class="more">...more</div>
+            <div class="more" @click="showModal">...more</div>
           </div>
         </div>
       </div>
@@ -54,6 +54,19 @@ export default Vue.extend({
         return this.filtered.reduce((acc, item) => acc + item.price, 0);
       }
       return 0;
+    },
+  },
+  methods: {
+    showModal() {
+      if (this.type === 'one') {
+        this.$store.commit('showModalOne', true);
+      } else if (this.type === 'two') {
+        this.$store.commit('showModalTwo', true);
+      } else if (this.type === 'three') {
+        this.$store.commit('showModalThree', true);
+      } else if (this.type === 'four') {
+        this.$store.commit('showModalFour', true);
+      }
     },
   },
 });

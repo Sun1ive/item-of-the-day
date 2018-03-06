@@ -5,6 +5,10 @@ import { IProduct } from '../types/types';
 Vue.use(Vuex);
 
 interface IState {
+  modalOne: boolean;
+  modalTwo: boolean;
+  modalThree: boolean;
+  modalFour: boolean;
   cart: any[];
   typeOne: Array<{
     title: string;
@@ -42,6 +46,10 @@ interface IState {
 
 export default new Vuex.Store({
   state: {
+    modalOne: false,
+    modalTwo: false,
+    modalThree: false,
+    modalFour: false,
     cart: [],
     typeOne: [
       {
@@ -218,6 +226,18 @@ export default new Vuex.Store({
     },
     decrement(state: IState, payload: IProduct) {
       state.cart.splice(state.cart.findIndex(x => x.item === payload.item), 1);
+    },
+    showModalOne(state, payload: boolean) {
+      state.modalOne = payload;
+    },
+    showModalTwo(state, payload: boolean) {
+      state.modalTwo = payload;
+    },
+    showModalThree(state, payload: boolean) {
+      state.modalThree = payload;
+    },
+    showModalFour(state, payload: boolean) {
+      state.modalFour = payload;
     },
   },
 });

@@ -27,15 +27,15 @@
               :iconWidth="30"
               :iconHeight="30"
               class="btn"
-              @click.native="showModal = !showModal"
+              @click.native="showModal"
             >Add to</Btn>
           </ProductContainer>
         </div>
       </div>
     </div>
     <Modal
-      v-if="showModal"
-      @close="showModal = !showModal"
+      v-if="isActive"
+      @close="closeModal"
     >
       <BoxItemModal
         v-for="(item, i) in slider"
@@ -60,12 +60,20 @@ export default Vue.extend({
   components: {
     Slider,
   },
-  data: () => ({
-    showModal: false as boolean,
-  }),
   computed: {
     slider(): IProductsArray[] {
       return this.$store.state.typeFour;
+    },
+    isActive(): boolean {
+      return this.$store.state.modalFour;
+    },
+  },
+  methods: {
+    showModal() {
+      this.$store.commit('showModalFour', true);
+    },
+    closeModal() {
+      this.$store.commit('showModalFour', false);
     },
   },
 });

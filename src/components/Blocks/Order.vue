@@ -24,10 +24,12 @@
           />
           <div class="discount__wrapper">
             <div class="discount">
-              <div>Discount:</div><div>$13</div>
+              <div>Discount:</div>
+              <div>$13</div>
             </div>
             <div class="total">
-              <div>Total:</div><div class="total__price">$154</div>
+              <div>Total:</div>
+              <div class="total__price">${{ totalPrice }}</div>
             </div>
           </div>
         </div>
@@ -50,13 +52,18 @@ export default Vue.extend({
     Form,
     Cart,
   },
+  computed: {
+    totalPrice(): number {
+      return this.$store.getters.totalPrice;
+    },
+  },
 });
 </script>
 
 
 <style scoped lang="stylus">
 .checkout
-  margin-top: 6rem
+  margin: 6rem 0
   background-image: url('/checkout.jpg')
   background-position: center
   background-size: cover
@@ -73,6 +80,7 @@ export default Vue.extend({
   width 200px
   padding 1rem
   letter-spacing 2px
+  margin-top 1rem
 
 .discount
 .total

@@ -240,4 +240,9 @@ export default new Vuex.Store({
       state.modalFour = payload;
     },
   },
+  getters: {
+    totalPrice(state): number {
+      return state.cart.reduce((acc, item) => acc + item.price, 0);
+    },
+  },
 });

@@ -12,3 +12,12 @@ export interface IProductsArray {
   type: string;
   item: string;
 }
+
+export interface IItems {
+  title: string;
+  src: string;
+  price: number;
+  alt: string;
+  id: number;
+  type: string;
+}

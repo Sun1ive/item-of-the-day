@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-import { IProduct } from '../types/types';
+import { IProduct, IItems } from '../types/types';
 
 Vue.use(Vuex);
 
@@ -10,38 +10,10 @@ interface IState {
   modalThree: boolean;
   modalFour: boolean;
   cart: any[];
-  typeOne: Array<{
-    title: string;
-    src: string;
-    price: number;
-    alt: string;
-    id: number;
-    type: string;
-  }>;
-  typeTwo: Array<{
-    title: string;
-    src: string;
-    price: number;
-    alt: string;
-    id: number;
-    type: string;
-  }>;
-  typeThree: Array<{
-    title: string;
-    src: string;
-    price: number;
-    alt: string;
-    id: number;
-    type: string;
-  }>;
-  typeFour: Array<{
-    title: string;
-    src: string;
-    price: number;
-    alt: string;
-    id: number;
-    type: string;
-  }>;
+  typeOne: IItems[];
+  typeTwo: IItems[];
+  typeThree: IItems[];
+  typeFour: IItems[];
 }
 
 export default new Vuex.Store({

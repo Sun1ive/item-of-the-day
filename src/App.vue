@@ -2,6 +2,7 @@
   <div id="app">
     <Header />
     <Main />
+    <ScrollTop />
   </div>
 </template>
 
@@ -9,13 +10,13 @@
 import Vue from 'vue';
 import Header from '@/components/layout/Header.vue';
 import Main from '@/components/layout/Main.vue';
-import Footer from '@/components/layout/Footer.vue';
+import ScrollTop from '@/components/Shared/ScrollTop.vue';
 
 export default Vue.extend({
   components: {
     Header,
     Main,
-    Footer,
+    ScrollTop,
   },
 });
 </script>

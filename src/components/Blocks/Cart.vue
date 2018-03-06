@@ -88,7 +88,10 @@ export default Vue.extend({
     background-color #dfab1f
     color #fff
     padding 0 1rem
-    cursor pointer
+    transition .4s ease
+    &:hover
+      background-color orangered
+      cursor pointer
   img
     width 100px
     height 100px

@@ -22,6 +22,14 @@
             :type="'four'"
             :title="'Микрофибра (Салфетка для пыли)'"
           />
+          <div class="discount__wrapper">
+            <div class="discount">
+              <div>Discount:</div><div>$13</div>
+            </div>
+            <div class="total">
+              <div>Total:</div><div class="total__price">$154</div>
+            </div>
+          </div>
         </div>
         <div class="col-6">
           <Form />
@@ -59,5 +67,21 @@ export default Vue.extend({
   .head
     font-size: 3rem
 
+.discount__wrapper
+  background-color #fff
+  font-size responsive 1rem 2.5rem
+  width 200px
+  padding 1rem
+  letter-spacing 2px
 
+.discount
+.total
+  display flex
+  justify-content space-between
+  align-items center
+
+.total
+  &__price
+    font-size 3rem
+    color #CD9936
 </style>

@@ -3,7 +3,9 @@
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-3">
-          <div class="offer">We offer</div>
+          <div class="offer">
+            <p>We offer</p>
+          </div>
         </div>
       </div>
       <div class="row justify-content-between">
@@ -69,9 +71,12 @@ export default Vue.extend({
   text-transform: uppercase;
   color: #fefefe;
   font-size: responsive 2rem 3rem
-  font-family 'MyriadPro', Arial, serif
+  font-family  Arial, Helvetica, sans-serif
   text-align: center;
-  height 44px
   margin-top 9rem
+  display flex
+  justify-content center
+  align-items center
+  text-align center
 
 </style>

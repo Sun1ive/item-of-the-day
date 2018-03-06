@@ -2,7 +2,7 @@
   <header class="header">
     <div class="container">
       <div class="row justify-content-center">
-        <div class="col-lg-7">
+        <div class="col-lg-6">
           <h1 class="header__title"><span class="yellow">H</span>ome products</h1>
         </div>
       </div>
@@ -37,13 +37,12 @@ export default Vue.extend({});
     color: #fff;
     text-align: center;
     background-color: rgba(#25213b, 0.8);
-    margin: 0.5rem 0;
-    padding: 0.5rem 0;
-    letter-spacing: 4px;
   &__text
-    font-size: 2.1rem;
+    font-size: responsive 2rem 3rem;
+    letter-spacing 4px
+    font-weight bold
   &__title
     font-size: responsive 1.5rem 7rem;
-    letter-spacing 2.2px
+    letter-spacing 5px
 
 </style>

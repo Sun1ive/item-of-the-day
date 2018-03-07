@@ -2,12 +2,12 @@
   <header class="header">
     <div class="container">
       <div class="row justify-content-center">
-        <div class="col-lg-6">
+        <div class="col-lg-6 col-6">
           <h1 class="header__title"><span class="yellow">H</span>ome products</h1>
         </div>
       </div>
       <div class="row justify-content-center">
-        <div class="col-lg-8">
+        <div class="col-lg-8 col-sm-9 col-10">
           <p class="header__text">The best offer for you and for your home space</p>
         </div>
       </div>
@@ -38,9 +38,10 @@ export default Vue.extend({});
     text-align: center;
     background-color: rgba(#25213b, 0.8);
   &__text
-    font-size: responsive 2rem 3rem;
+    font-size: responsive 1.3rem 3rem;
     letter-spacing 4px
     font-weight bold
+    padding 0.5rem 0
   &__title
     font-size: responsive 1.5rem 7rem;
     letter-spacing 5px

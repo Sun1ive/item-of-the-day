@@ -25,4 +25,9 @@ export default Vue.extend({});
     width: 90%;
     height: 85%;
 
+
+@media (max-width 450px)
+  .box
+    width 150px
+    height 150px
 </style>

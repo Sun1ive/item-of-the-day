@@ -2,17 +2,17 @@
   <div class="allProducts">
     <div class="container">
       <div class="row justify-content-center">
-        <div class="col-3">
+        <div class="col-lg-3 col-md-3 col-sm-3 col-4">
           <div class="offer">
-            <p>We offer</p>
+            <p class="offer__title">We offer</p>
           </div>
         </div>
       </div>
-      <div class="row justify-content-between">
+      <div class="row products">
         <div
           v-for="item in products"
           :key="item.title"
-          class="col-5"
+          class="col-lg-6 col-md-6 col-sm-6 col-12"
         >
           <div class="text" v-html="item.title" />
           <Box>
@@ -20,7 +20,7 @@
           </Box>
           <Btn
             v-scroll-to="`${item.el}`"
-            :width="170"
+            :width="150"
             :arrow="true"
             :iconWidth="30"
             :iconHeight="16"
@@ -55,22 +55,25 @@ export default Vue.extend({
   .container
     padding-top: 6rem
 
-.col-5
+.col-lg-6
   text-align: center;
   margin: 3rem 0;
   .text
-    font-size: responsive 2rem 3.5rem
+    font-size: responsive 1.3rem 3.5rem
     color #2e2444
     margin-bottom: 1rem;
   .my-btn
     margin-left: auto;
-    font-size responsive 1rem 2rem
+    font-size responsive 1.3rem 2rem
+
+.products
+  justify-content space-between
 
 .offer
   background-color: #15101f;
   text-transform: uppercase;
   color: #fefefe;
-  font-size: responsive 2rem 3rem
+  font-size: responsive 1.5rem 3rem
   font-family  Arial, Helvetica, sans-serif
   text-align: center;
   margin-top 9rem
@@ -78,5 +81,14 @@ export default Vue.extend({
   justify-content center
   align-items center
   text-align center
+
+@media (max-width 450px)
+  .offer
+    margin-top 6rem
+  .col-12
+    margin 1rem 0
+    padding 0
+    .my-btn
+      margin 1rem auto
 
 </style>

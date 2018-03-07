@@ -28,6 +28,6 @@ export default Vue.extend({});
 
 @media (max-width 450px)
   .box
-    width 200px
-    height 200px
+    width 190px
+    height 190px
 </style>

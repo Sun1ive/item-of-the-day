@@ -38,4 +38,12 @@ export default Vue.extend({});
     margin-top 2rem
     div
       flex-grow 1
+
+@media (max-width 450px)
+  .discount
+    height 450px
+  .discount__image
+    height 170px
+    width 99%
+
 </style>

@@ -1,8 +1,8 @@
 <template>
   <div class="checkout">
     <div class="container">
-      <div class="row justify-content-between">
-        <div class="col-5">
+      <div class="row order">
+        <div class="inCart col-lg col-md col-sm col-11">
           <Cart
             :type="'one'"
             :title="'Сувенирные подушечки с лавандой'"
@@ -25,7 +25,7 @@
           <div class="discount__wrapper">
             <div class="discount">
               <div>Discount:</div>
-              <div>$13</div>
+              <div>$5</div>
             </div>
             <div class="total">
               <div>Total:</div>
@@ -33,7 +33,7 @@
             </div>
           </div>
         </div>
-        <div class="col-6">
+        <div class="col-lg col-md col-sm col-11">
           <Form />
         </div>
       </div>
@@ -74,10 +74,16 @@ export default Vue.extend({
   .head
     font-size: 3rem
 
+.inCart
+  text-align center
+
+.order
+  justify-content space-around
+
 .discount__wrapper
   background-color #fff
   font-size responsive 1rem 2.5rem
-  width 200px
+  width 250px
   padding 1rem
   letter-spacing 2px
   margin-top 1rem
@@ -90,6 +96,11 @@ export default Vue.extend({
 
 .total
   &__price
-    font-size 3rem
+    font-size responsive 1.5rem 3rem
     color #CD9936
+@media (max-width 450px)
+  .order
+    justify-content center
+  .inCart
+    margin 1rem 0
 </style>

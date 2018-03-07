@@ -50,7 +50,8 @@ export default Vue.extend({
 
 <style scoped lang="stylus">
 .allProducts
-  background-image: url('/gray.png');
+  background-image: url('/gray.png')
+  background-size cover
   margin-top: -10.5rem;
   .container
     padding-top: 6rem
@@ -83,6 +84,11 @@ export default Vue.extend({
   text-align center
 
 @media (max-width 450px)
+  .allProducts
+    margin-top -2.5rem
+    height 1550px
+    .container
+      padding-top 1rem
   .offer
     margin-top 6rem
   .col-12

@@ -1,6 +1,6 @@
 <template>
   <div v-if="inCart" class="container">
-    <div class="row">
+    <div class="row justify-content-center">
       <div class="col">
         <div class="item-box">
           <img :src="img" alt="Awesome Pillow">
@@ -97,12 +97,12 @@ export default Vue.extend({
     height 100px
     border 2px solid #cbc4dc
   .text__wrapper
-    font-size 2rem
+    font-size responsive 1.5rem 2rem
     margin-left 2rem
 
 .quantity
   background-color #cbc4dc
-  font-size 2rem
+  font-size responsive 1.3rem 2rem
   width 70px
   text-align center
 
@@ -112,8 +112,12 @@ export default Vue.extend({
   margin-top 1rem
 
 .total
-  font-size 2.5rem
+  font-size responsive 1.5rem 2.5rem
   color: #dfab1f
   margin-left 3rem
+
+@media(max-width 450px)
+  .quantity
+    width 50px
 
 </style>

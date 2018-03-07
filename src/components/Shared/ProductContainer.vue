@@ -5,12 +5,12 @@
         <slot name="item-head" />
       </div>
       <div class="row align-items-center">
-        <div class="col-4">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-12">
           <Box>
             <slot name="item-image" />
           </Box>
         </div>
-        <div class="col-8">
+        <div class="col-lg-8 col-md-8 col-sm-8 col-12">
           <div class="flex">
             <img src="../../assets/line.png" alt="size">
             <slot name="item-size" />
@@ -62,4 +62,6 @@ export default Vue.extend({});
     color #333
     margin-left auto
     font-size responsive 1rem 2rem
+
+
 </style>

@@ -11,7 +11,7 @@ import 'swiper/dist/css/swiper.css';
 import 'bootstrap/dist/css/bootstrap-grid.min.css';
 import App from './App.vue';
 import store from './store';
-import './registerServiceWorker';
+// import './registerServiceWorker';
 import './styles/main.styl';
 
 Vue.config.productionTip = false;

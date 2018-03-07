@@ -91,4 +91,10 @@ export default Vue.extend({});
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
+
+@media (max-width: 450px) {
+  .modal-container{
+    width: 350px;
+  }
+}
 </style>

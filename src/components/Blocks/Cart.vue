@@ -1,19 +1,13 @@
 <template>
-  <div v-if="inCart" class="container">
-    <div class="row justify-content-center">
-      <div class="col">
-        <div class="item-box">
-          <img :src="img" alt="Awesome Pillow">
-          <div class="text__wrapper">
-            <div class="title">{{ title }}</div>
-            <div class="text__item">
-              <div class="quantity">{{ quantity }}</div>
-              <div class="total">{{ total }}$</div>
-            </div>
-            <div class="more" @click="showModal">...more</div>
-          </div>
-        </div>
+  <div v-if="inCart" class="item-box">
+    <img :src="img" alt="Awesome Pillow">
+    <div class="text__wrapper">
+      <div class="title">{{ title }}</div>
+      <div class="text__item">
+        <div class="quantity">{{ quantity }}</div>
+        <div class="total">{{ total }}$</div>
       </div>
+      <div class="more" @click="showModal">...more</div>
     </div>
   </div>
 </template>

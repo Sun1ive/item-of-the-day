@@ -60,12 +60,12 @@ export default Vue.extend({
   text-align: center;
   margin: 3rem 0;
   .text
-    font-size: responsive 1.3rem 3.5rem
+    font-size: responsive 2rem 3.5rem
     color #2e2444
     margin-bottom: 1rem;
   .my-btn
     margin-left: auto;
-    font-size responsive 1.3rem 2rem
+    font-size responsive 1.5rem 2rem
 
 .products
   justify-content space-between

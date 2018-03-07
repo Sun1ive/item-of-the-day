@@ -98,9 +98,13 @@ export default Vue.extend({
   &__price
     font-size responsive 1.5rem 3rem
     color #CD9936
+
 @media (max-width 450px)
   .order
     justify-content center
   .inCart
     margin 1rem 0
+  .discount__wrapper
+    margin 1rem auto
+
 </style>

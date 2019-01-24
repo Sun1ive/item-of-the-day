@@ -13,7 +13,7 @@
     "source": "dist"
   },
   "dependencies": {
-    "bootstrap": "^4.0.0",
+    "bootstrap": "^4.1.0",
     "register-service-worker": "^1.0.0",
     "vue": "^2.5.13",
     "vue-awesome-swiper": "^3.1.3",
